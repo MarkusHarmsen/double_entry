@@ -13,6 +13,11 @@ module DoubleEntry
     end
 
     belongs_to :line
-    serialize :key, SymbolWrapper
+
+    if Rails.gem_version >= '7.1.0'
+      serialize :key, coder: SymbolWrapper
+    else
+      serialize :key, SymbolWrapper
+    end
   end
 end

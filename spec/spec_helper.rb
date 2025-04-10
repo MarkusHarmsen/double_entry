@@ -1,7 +1,7 @@
 # encoding: utf-8
 require 'bundler/setup'
 require 'active_record'
-require 'active_support'
+require 'active_support/all'
 
 if ActiveRecord::VERSION::MAJOR < 4
   require 'test-unit'
